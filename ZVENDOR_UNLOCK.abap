@@ -145,7 +145,7 @@ function zvendor_unlock.
 
   " Executing BDC sequence
 
-  if ( lo_zcl_ca_bdc->is_at_least_one_field_filled( ) eq abap_true ).
+  if ( lo_zcl_ca_bdc->is_at_least_one_field_filled( ) eq abap_true ) and ( lv_master_data_locked <> 'X' ).
 
     lt_bdc_exec_result = lo_zcl_ca_bdc->run( ).
 
